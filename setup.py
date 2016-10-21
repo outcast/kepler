@@ -8,5 +8,5 @@ setup(name='Kepler',
       author='James Jones',
       author_email='james.voip@gmail.com',
       url='http://outcast.github.io/kepler/',
-      packages=['kepler'],
+      packages=['kepler', 'kepler.handlers'],
       )
