@@ -13,9 +13,10 @@ class Config(object):
         config_yaml.close()
         return config
 
-
+"""
 parser = argparse.ArgumentParser(description='Kepler Server')
 parser.add_argument('config_file_path',help="Path to config file")
 args = parser.parse_args()
+"""
 
-config = Config(args.config_file_path).config
+config = Config("./config/config.yaml").config
