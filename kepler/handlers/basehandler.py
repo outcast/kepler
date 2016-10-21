@@ -1,4 +1,4 @@
-from lolapiserver.config import config
+from kepler.config import config
 
 class BaseHandler(object):
 

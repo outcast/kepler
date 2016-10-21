@@ -1,4 +1,4 @@
-from lolapiserver.handlers.basehandler import BaseHandler
+from kepler.handlers.basehandler import BaseHandler
 
 class PingHandler(BaseHandler):
 
