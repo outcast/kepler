@@ -12,10 +12,10 @@ def list_handlers():
             if module.endswith("handler.py")]
 
 
-def register_endpoints():
+def register_endpoints(package):
     handlers = list_handlers()
     for h in handlers:
-        mod = __import__('kepler.handlers.{}'.format(h), fromlist=['kepler.handlers'])
+        mod = __import__('{}.handlers.{}'.format(package, h), fromlist=['{}.handlers'.format(package)])
         if not hasattr(mod, '__handlers__'):
             e = AttributeError()
             e.message = "Handler module {} do have attribute '__handlers__'"
@@ -84,4 +84,4 @@ class MasterHandler(BaseHTTPRequestHandler):
             return
 
 
-register_endpoints()
+register_endpoints('kepler')
